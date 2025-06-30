@@ -1,0 +1,14 @@
+setup.py
+revisions/__init__.py
+revisions/aligned_text.py
+revisions/data_paths.py
+revisions/dataset.py
+revisions/diff.py
+revisions/edits_html.py
+revisions/get_batch_output.py
+revisions/get_single_output.py
+revisions/utils.py
+revisions.egg-info/PKG-INFO
+revisions.egg-info/SOURCES.txt
+revisions.egg-info/dependency_links.txt
+revisions.egg-info/top_level.txt

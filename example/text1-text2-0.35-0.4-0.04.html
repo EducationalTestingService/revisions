@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <style type="text/css">
+        .active {
+            filter: brightness(120%);
+            background-color: #33bfff;
+            text-decoration: underline;
+        }
+        span {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+            cursor: pointer;
+        }
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+        }
+        .scrollbox {
+            overflow-y: scroll;
+            height: 800px; /* Increased the height of the scrollbox */
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-left:45px; margin-right:45px">
+        <div class="box" style="width: 100%;">
+            <div style="float:left; width: 45%">
+                <h1 align="center"></h1>
+                <div class="scrollbox">
+                    
+                        <div class="paragraph">
+                            <span class="46aa14e0-4e9b-4638-a026-5e2259d77dd9-0">
+    The forest was <span style="background-color:#00FF99">quiet</span> , save for the occasional rustle of leaves in the wind .
+</span> <span class="46aa14e0-4e9b-4638-a026-5e2259d77dd9-1">
+    Birds <span style="background-color:#00FF99">chirped</span> softly in the canopy above , and a stream <span style="background-color:#00FF99">gurgled</span> nearby .
+</span> <span class="46aa14e0-4e9b-4638-a026-5e2259d77dd9-2">
+    It was the kind of morning that invited <span style="background-color:#00FF99">reflection</span> .
+</span>
+                            <br> <br>
+                        </div>
+                    
+                        <div class="paragraph">
+                            <span class="6da037a0-4a76-4134-802f-49666acefc13-0">
+    Elena walked slowly along the trail , her boots crunching on the gravel path .
+</span> <span class="6da037a0-4a76-4134-802f-49666acefc13-1">
+    She carried a small backpack with a notebook a thermos of tea <span style="background-color:#CC99FF"><strike>, and a worn paperback novel</strike></span> .
+</span> <span class="6da037a0-4a76-4134-802f-49666acefc13-2">
+    This was her weekend ritual — solitude and nature .
+</span>
+                            <br> <br>
+                        </div>
+                    
+                        <div class="paragraph">
+                            <span class="1c7e12e2-122f-46aa-9925-c3fd6094f097-0">
+    At the clearing , she paused to take in the view .
+</span> <span class="1c7e12e2-122f-46aa-9925-c3fd6094f097-1">
+    The valley stretched out below , dotted with wildflowers and the occasional deer .
+</span> <span class="1c7e12e2-122f-46aa-9925-c3fd6094f097-2">
+    She sat on a flat rock and opened her notebook to write .
+</span>
+                            <br> <br>
+                        </div>
+                    
+                        <div class="paragraph">
+                            <span style="background-color:#CC99FF"><strike>The sun rose higher, casting long shadows through the trees. A hawk circled overhead, its cry echoing across the hills. Elena felt a deep sense of calm settle over her.</strike></span>
+                            <br> <br>
+                        </div>
+                    
+                </div>
+            </div>
+            <div style="float:right; width: 45%">
+                <h1 align="center"></h1>
+                <div class="scrollbox">
+                    
+                        <div class="paragraph">
+                            <span class="46aa14e0-4e9b-4638-a026-5e2259d77dd9-0">
+    The forest was <span style="background-color:#00FF99">still</span> , save for the occasional rustle of leaves in the wind .
+</span> <span class="46aa14e0-4e9b-4638-a026-5e2259d77dd9-1">
+    Birds <span style="background-color:#00FF99">sang</span> softly in the canopy above , and a stream <span style="background-color:#00FF99">trickled</span> nearby .
+</span> <span class="46aa14e0-4e9b-4638-a026-5e2259d77dd9-2">
+    It was the kind of morning that invited <span style="background-color:#00FF99">introspection</span> .
+</span>
+                            <br> <br>
+                        </div>
+                    
+                        <div class="paragraph">
+                            <span class="6da037a0-4a76-4134-802f-49666acefc13-0">
+    Elena walked slowly along the trail , her boots crunching on the gravel path .
+</span> <span class="6da037a0-4a76-4134-802f-49666acefc13-1">
+    She carried a small backpack with a notebook a thermos of tea .
+</span> <span class="6da037a0-4a76-4134-802f-49666acefc13-2">
+    This was her weekend ritual — solitude and nature .
+</span>
+                            <br> <br>
+                        </div>
+                    
+                        <div class="paragraph">
+                            <span class="1c7e12e2-122f-46aa-9925-c3fd6094f097-0">
+    At the clearing , she paused to take in the view .
+</span> <span class="1c7e12e2-122f-46aa-9925-c3fd6094f097-1">
+    The valley stretched out below , dotted with wildflowers and the occasional deer .
+</span> <span style="background-color:#FF99FF">A gentle breeze stirred the grass, carrying the scent of pine and earth.</span> <span class="1c7e12e2-122f-46aa-9925-c3fd6094f097-2">
+    She sat on a flat rock and opened her notebook to write .
+</span>
+                            <br> <br>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+    <script>
+        $('span').hover(function() {
+            var theClass = $(this).attr('class');
+            $('span.' + theClass).toggleClass("active");
+        }, function() {
+            $('span').removeClass("active");
+        });
+
+        $('span').click(function() {
+            var theClass = $(this).attr('class');
+            var target = $('span.' + theClass).not(this).first();
+            if (target.length) {
+                var otherPanelScrollbox = target.closest('.scrollbox');
+                otherPanelScrollbox.animate({
+                    scrollTop: otherPanelScrollbox.scrollTop() + target.position().top - otherPanelScrollbox.position().top
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+    <div style='margin-top:20px; font-size:16px;'>
+        * Insertions are <span style="background-color:#FF99FF">highlighted in pink</span> <br>
+        * Deletions are <span style="background-color:#CC99FF"><strike>striked and highlighted in purple</strike></span> <br>
+        * Substitutions are <span style="background-color:#00FF99">highlighted in green</span>
+    </div>
+    

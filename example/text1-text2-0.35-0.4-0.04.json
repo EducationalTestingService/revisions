@@ -1,0 +1,608 @@
+{
+  "file1_sentences": [
+    {
+      "text": "The forest was quiet, save for the occasional rustle of leaves in the wind.",
+      "paragraph_index": 0,
+      "sentence_index": 0,
+      "offset": [
+        0,
+        75
+      ]
+    },
+    {
+      "text": "Birds chirped softly in the canopy above, and a stream gurgled nearby.",
+      "paragraph_index": 0,
+      "sentence_index": 1,
+      "offset": [
+        76,
+        146
+      ]
+    },
+    {
+      "text": "It was the kind of morning that invited reflection.",
+      "paragraph_index": 0,
+      "sentence_index": 2,
+      "offset": [
+        147,
+        198
+      ]
+    },
+    {
+      "text": "Elena walked slowly along the trail, her boots crunching on the gravel path.",
+      "paragraph_index": 1,
+      "sentence_index": 3,
+      "offset": [
+        199,
+        275
+      ]
+    },
+    {
+      "text": "She carried a small backpack with a notebook, a thermos of tea, and a worn paperback novel.",
+      "paragraph_index": 1,
+      "sentence_index": 4,
+      "offset": [
+        276,
+        367
+      ]
+    },
+    {
+      "text": "This was her weekend ritual—solitude and nature.",
+      "paragraph_index": 1,
+      "sentence_index": 5,
+      "offset": [
+        368,
+        416
+      ]
+    },
+    {
+      "text": "At the clearing, she paused to take in the view.",
+      "paragraph_index": 2,
+      "sentence_index": 6,
+      "offset": [
+        417,
+        465
+      ]
+    },
+    {
+      "text": "The valley stretched out below, dotted with wildflowers and the occasional deer.",
+      "paragraph_index": 2,
+      "sentence_index": 7,
+      "offset": [
+        466,
+        546
+      ]
+    },
+    {
+      "text": "She sat on a flat rock and opened her notebook to write.",
+      "paragraph_index": 2,
+      "sentence_index": 8,
+      "offset": [
+        547,
+        603
+      ]
+    },
+    {
+      "text": "The sun rose higher, casting long shadows through the trees.",
+      "paragraph_index": 3,
+      "sentence_index": 9,
+      "offset": [
+        604,
+        664
+      ]
+    },
+    {
+      "text": "A hawk circled overhead, its cry echoing across the hills.",
+      "paragraph_index": 3,
+      "sentence_index": 10,
+      "offset": [
+        665,
+        723
+      ]
+    },
+    {
+      "text": "Elena felt a deep sense of calm settle over her.",
+      "paragraph_index": 3,
+      "sentence_index": 11,
+      "offset": [
+        724,
+        772
+      ]
+    }
+  ],
+  "file2_sentences": [
+    {
+      "text": "The forest was still, save for the occasional rustle of leaves in the wind.",
+      "paragraph_index": 0,
+      "sentence_index": 0,
+      "offset": [
+        0,
+        75
+      ]
+    },
+    {
+      "text": "Birds sang softly in the canopy above, and a stream trickled nearby.",
+      "paragraph_index": 0,
+      "sentence_index": 1,
+      "offset": [
+        76,
+        144
+      ]
+    },
+    {
+      "text": "It was the kind of morning that invited introspection.",
+      "paragraph_index": 0,
+      "sentence_index": 2,
+      "offset": [
+        145,
+        199
+      ]
+    },
+    {
+      "text": "Elena walked slowly along the trail, her boots crunching on the gravel path.",
+      "paragraph_index": 1,
+      "sentence_index": 3,
+      "offset": [
+        200,
+        276
+      ]
+    },
+    {
+      "text": "She carried a small backpack with a notebook and a thermos of tea.",
+      "paragraph_index": 1,
+      "sentence_index": 4,
+      "offset": [
+        277,
+        343
+      ]
+    },
+    {
+      "text": "This was her weekend ritual—solitude and nature.",
+      "paragraph_index": 1,
+      "sentence_index": 5,
+      "offset": [
+        344,
+        392
+      ]
+    },
+    {
+      "text": "At the clearing, she paused to take in the view.",
+      "paragraph_index": 2,
+      "sentence_index": 6,
+      "offset": [
+        393,
+        441
+      ]
+    },
+    {
+      "text": "The valley stretched out below, dotted with wildflowers and the occasional deer.",
+      "paragraph_index": 2,
+      "sentence_index": 7,
+      "offset": [
+        442,
+        522
+      ]
+    },
+    {
+      "text": "A gentle breeze stirred the grass, carrying the scent of pine and earth.",
+      "paragraph_index": 2,
+      "sentence_index": 8,
+      "offset": [
+        523,
+        595
+      ]
+    },
+    {
+      "text": "She sat on a flat rock and opened her notebook to write.",
+      "paragraph_index": 2,
+      "sentence_index": 9,
+      "offset": [
+        596,
+        652
+      ]
+    }
+  ],
+  "alignments": {
+    "0": {
+      "match": [
+        0
+      ],
+      "edits": [
+        {
+          "edit_type": "same",
+          "offset1": [
+            0,
+            14
+          ],
+          "offset2": [
+            0,
+            14
+          ],
+          "text1": "The forest was",
+          "text2": "The forest was"
+        },
+        {
+          "edit_type": "substitution",
+          "offset1": [
+            15,
+            20
+          ],
+          "offset2": [
+            15,
+            20
+          ],
+          "text1": "quiet",
+          "text2": "still"
+        },
+        {
+          "edit_type": "same",
+          "offset1": [
+            20,
+            75
+          ],
+          "offset2": [
+            20,
+            75
+          ],
+          "text1": ", save for the occasional rustle of leaves in the wind.",
+          "text2": ", save for the occasional rustle of leaves in the wind."
+        }
+      ]
+    },
+    "1": {
+      "match": [
+        1
+      ],
+      "edits": [
+        {
+          "edit_type": "same",
+          "offset1": [
+            76,
+            81
+          ],
+          "offset2": [
+            76,
+            81
+          ],
+          "text1": "Birds",
+          "text2": "Birds"
+        },
+        {
+          "edit_type": "substitution",
+          "offset1": [
+            82,
+            89
+          ],
+          "offset2": [
+            82,
+            86
+          ],
+          "text1": "chirped",
+          "text2": "sang"
+        },
+        {
+          "edit_type": "same",
+          "offset1": [
+            90,
+            130
+          ],
+          "offset2": [
+            87,
+            127
+          ],
+          "text1": "softly in the canopy above, and a stream",
+          "text2": "softly in the canopy above, and a stream"
+        },
+        {
+          "edit_type": "substitution",
+          "offset1": [
+            131,
+            138
+          ],
+          "offset2": [
+            128,
+            136
+          ],
+          "text1": "gurgled",
+          "text2": "trickled"
+        },
+        {
+          "edit_type": "same",
+          "offset1": [
+            139,
+            146
+          ],
+          "offset2": [
+            137,
+            144
+          ],
+          "text1": "nearby.",
+          "text2": "nearby."
+        }
+      ]
+    },
+    "2": {
+      "match": [
+        2
+      ],
+      "edits": [
+        {
+          "edit_type": "same",
+          "offset1": [
+            147,
+            186
+          ],
+          "offset2": [
+            145,
+            184
+          ],
+          "text1": "It was the kind of morning that invited",
+          "text2": "It was the kind of morning that invited"
+        },
+        {
+          "edit_type": "substitution",
+          "offset1": [
+            187,
+            197
+          ],
+          "offset2": [
+            185,
+            198
+          ],
+          "text1": "reflection",
+          "text2": "introspection"
+        },
+        {
+          "edit_type": "same",
+          "offset1": [
+            197,
+            198
+          ],
+          "offset2": [
+            198,
+            199
+          ],
+          "text1": ".",
+          "text2": "."
+        }
+      ]
+    },
+    "3": {
+      "match": [
+        3
+      ],
+      "edits": [
+        {
+          "edit_type": "same",
+          "offset1": [
+            199,
+            275
+          ],
+          "offset2": [
+            200,
+            276
+          ],
+          "text1": "Elena walked slowly along the trail, her boots crunching on the gravel path.",
+          "text2": "Elena walked slowly along the trail, her boots crunching on the gravel path."
+        }
+      ]
+    },
+    "4": {
+      "match": [
+        4
+      ],
+      "edits": [
+        {
+          "edit_type": "same",
+          "offset1": [
+            276,
+            320
+          ],
+          "offset2": [
+            277,
+            321
+          ],
+          "text1": "She carried a small backpack with a notebook",
+          "text2": "She carried a small backpack with a notebook"
+        },
+        {
+          "edit_type": "substitution",
+          "offset1": [
+            320,
+            321
+          ],
+          "offset2": [
+            322,
+            325
+          ],
+          "text1": ",",
+          "text2": "and"
+        },
+        {
+          "edit_type": "same",
+          "offset1": [
+            322,
+            338
+          ],
+          "offset2": [
+            326,
+            342
+          ],
+          "text1": "a thermos of tea",
+          "text2": "a thermos of tea"
+        },
+        {
+          "edit_type": "deletion",
+          "offset1": [
+            338,
+            366
+          ],
+          "offset2": [
+            -1,
+            -1
+          ],
+          "text1": ", and a worn paperback novel",
+          "text2": ""
+        },
+        {
+          "edit_type": "same",
+          "offset1": [
+            366,
+            367
+          ],
+          "offset2": [
+            342,
+            343
+          ],
+          "text1": ".",
+          "text2": "."
+        }
+      ]
+    },
+    "5": {
+      "match": [
+        5
+      ],
+      "edits": [
+        {
+          "edit_type": "same",
+          "offset1": [
+            368,
+            416
+          ],
+          "offset2": [
+            344,
+            392
+          ],
+          "text1": "This was her weekend ritual—solitude and nature.",
+          "text2": "This was her weekend ritual—solitude and nature."
+        }
+      ]
+    },
+    "6": {
+      "match": [
+        6
+      ],
+      "edits": [
+        {
+          "edit_type": "same",
+          "offset1": [
+            417,
+            465
+          ],
+          "offset2": [
+            393,
+            441
+          ],
+          "text1": "At the clearing, she paused to take in the view.",
+          "text2": "At the clearing, she paused to take in the view."
+        }
+      ]
+    },
+    "7": {
+      "match": [
+        7
+      ],
+      "edits": [
+        {
+          "edit_type": "same",
+          "offset1": [
+            466,
+            546
+          ],
+          "offset2": [
+            442,
+            522
+          ],
+          "text1": "The valley stretched out below, dotted with wildflowers and the occasional deer.",
+          "text2": "The valley stretched out below, dotted with wildflowers and the occasional deer."
+        }
+      ]
+    },
+    "8": {
+      "match": [
+        9
+      ],
+      "edits": [
+        {
+          "edit_type": "same",
+          "offset1": [
+            547,
+            603
+          ],
+          "offset2": [
+            596,
+            652
+          ],
+          "text1": "She sat on a flat rock and opened her notebook to write.",
+          "text2": "She sat on a flat rock and opened her notebook to write."
+        }
+      ]
+    },
+    "-1": {
+      "match": [
+        8
+      ],
+      "edits": []
+    },
+    "9": {
+      "match": [
+        -1
+      ],
+      "edits": [
+        {
+          "edit_type": "deletion",
+          "offset1": [
+            604,
+            664
+          ],
+          "offset2": [
+            -1,
+            -1
+          ],
+          "text1": "The sun rose higher, casting long shadows through the trees.",
+          "text2": ""
+        }
+      ]
+    },
+    "10": {
+      "match": [
+        -1
+      ],
+      "edits": [
+        {
+          "edit_type": "deletion",
+          "offset1": [
+            665,
+            723
+          ],
+          "offset2": [
+            -1,
+            -1
+          ],
+          "text1": "A hawk circled overhead, its cry echoing across the hills.",
+          "text2": ""
+        }
+      ]
+    },
+    "11": {
+      "match": [
+        -1
+      ],
+      "edits": [
+        {
+          "edit_type": "deletion",
+          "offset1": [
+            724,
+            772
+          ],
+          "offset2": [
+            -1,
+            -1
+          ],
+          "text1": "Elena felt a deep sense of calm settle over her.",
+          "text2": ""
+        }
+      ]
+    }
+  }
+}

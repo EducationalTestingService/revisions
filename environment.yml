@@ -1,0 +1,26 @@
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python==3.10
+  - pip
+  - pandas
+  - numpy==1.26
+  - tqdm
+  - spacy
+  - diff-match-patch
+  - nltk==3.5
+  - gensim
+  - jinja2
+  - click
+  - timeout-decorator
+  - pytest
+  - tabulate
+  - termcolor
+  - textacy
+  - pip:
+    - streamlit
+    - pdoc3
+    - openpyxl
+    - anthropic
+    - python-dotenv

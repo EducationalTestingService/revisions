@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <style type="text/css">
+        .active {
+            filter: brightness(120%);
+            background-color: #33bfff;
+            text-decoration: underline;
+        }
+        span {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+            cursor: pointer;
+        }
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+        }
+        .scrollbox {
+            overflow-y: scroll;
+            height: 800px; /* Increased the height of the scrollbox */
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-left:45px; margin-right:45px">
+        <div class="box" style="width: 100%;">
+            <div style="float:left; width: 45%">
+                <h1 align="center">{{ header1 }}</h1>
+                <div class="scrollbox">
+                    {% for par in html1_list %}
+                        <div class="paragraph">
+                            {{ par }}
+                            <br> <br>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div style="float:right; width: 45%">
+                <h1 align="center">{{ header2 }}</h1>
+                <div class="scrollbox">
+                    {% for par in html2_list %}
+                        <div class="paragraph">
+                            {{ par }}
+                            <br> <br>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+    <script>
+        $('span').hover(function() {
+            var theClass = $(this).attr('class');
+            $('span.' + theClass).toggleClass("active");
+        }, function() {
+            $('span').removeClass("active");
+        });
+
+        $('span').click(function() {
+            var theClass = $(this).attr('class');
+            var target = $('span.' + theClass).not(this).first();
+            if (target.length) {
+                var otherPanelScrollbox = target.closest('.scrollbox');
+                otherPanelScrollbox.animate({
+                    scrollTop: otherPanelScrollbox.scrollTop() + target.position().top - otherPanelScrollbox.position().top
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
+
+

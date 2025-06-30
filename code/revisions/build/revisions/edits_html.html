@@ -1,0 +1,1297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>revisions.edits_html API documentation</title>
+<meta name="description" content="`EditsHtml` identifies and formats substitutions, deletions, and insertions.
+Stores the contents of the HTML output in `EditsHtml.html1` and …">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>revisions.edits_html</code></h1>
+</header>
+<section id="section-intro">
+<p><code><a title="revisions.edits_html.EditsHtml" href="#revisions.edits_html.EditsHtml">EditsHtml</a></code> identifies and formats substitutions, deletions, and insertions.
+Stores the contents of the HTML output in <code>EditsHtml.html1</code> and <code>EditsHtml.html2</code>,
+and stores the contents of the JSON output in <code>EditsHtml.edits_json_dict</code>.</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="revisions.edits_html.EditsHtml"><code class="flex name class">
+<span>class <span class="ident">EditsHtml</span></span>
+<span>(</span><span>aligned_text, templates_dir)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class EditsHtml:
+    def __init__(self, aligned_text, templates_dir):
+        self.templates_dir = templates_dir
+        self.content1 = aligned_text.content1
+        self.content2 = aligned_text.content2
+
+        self.p1s = aligned_text.p1s
+        self.p2s = aligned_text.p2s
+
+        self.text1 = list(chain.from_iterable(self.p1s))
+        self.text2 = list(chain.from_iterable(self.p2s))
+
+        self.sentence_offsets1 = aligned_text.global_offsets1
+        self.sentence_offsets2 = aligned_text.global_offsets2
+        self.html1 = [&#34;&#34;] * len(self.p1s)  # List of HTML formatted paragraphs
+        self.html2 = [&#34;&#34;] * len(self.p2s)  # List of HTML formatted paragraphs
+
+        self.num_edits = 0
+        dummy_dict = {&#34;text&#34;: &#34;&#34;, &#34;offset&#34;: (-1, -1)}
+        self.edits_json_dict = {
+            &#34;file1_sentences&#34;: [dummy_dict] * len(self.text1),
+            &#34;file2_sentences&#34;: [dummy_dict] * len(self.text2),
+            &#34;alignments&#34;: dict(),
+        }
+        self.get_diff_html(aligned_text.par_alignment, aligned_text.sent_alignments)
+
+    def render_template(self, template_name, **kwargs):
+        with open(os.path.join(self.templates_dir, template_name)) as f:
+            template = Template(f.read())
+        html_text = template.render(kwargs)
+        return html_text
+
+    def get_html_text(self, header1=&#34;&#34;, header2=&#34;&#34;):
+        html1_list = [s for s in self.html1 if s.strip()]
+        html2_list = [s for s in self.html2 if s.strip()]
+
+        if not html1_list:
+            html1_list = [&#34;Empty&#34;]
+        if not html2_list:
+            html2_list = [&#34;Empty&#34;]
+
+        return self.render_template(
+            &#34;base.html&#34;,
+            html1_list=html1_list,
+            html2_list=html2_list,
+            header1=header1,
+            header2=header2,
+        )
+
+    def format_edit(self, text, edit_type):
+        return self.render_template(&#34;{}.html&#34;.format(edit_type), text=text)
+
+    def format_hover(self, text, index):
+        return self.render_template(&#34;hover.html&#34;, index=index, text=text)
+
+    def handle_diff(self, diff, char_diff, offsets1, offsets2, s1_indices, s2_indices):
+        &#34;&#34;&#34;
+        Args:
+            diff (list): Diff-match-patch output
+        &#34;&#34;&#34;
+        html1 = []
+        html2 = []
+        edit_dicts = []
+
+        num_tokens_list = [len(list(s)) for s in list(zip(*char_diff))[1]]
+        i = 0
+        last_index = len(diff) - 1
+
+        def deque(offset_list, diff_string, num_tokens):
+            diff_offsets = offset_list[:num_tokens]
+            if not diff_offsets:
+                edit_offset = (-1, -1)
+            else:
+                begin = diff_offsets[0][0]
+                end = diff_offsets[-1][-1]
+
+                # Important: double quotes can change the number of
+                # characters in a sentence.
+                num_double_quotes = diff_string.count(&#34;&#39;&#39;&#34;)
+                num_double_quotes += diff_string.count(&#34;``&#34;)
+                # Subtract 1 from the end for every double quote found
+                end -= num_double_quotes
+                edit_offset = (begin, end)
+
+            return edit_offset, offset_list[num_tokens:]
+
+        while i &lt;= last_index:
+            diff_type, diff_string = diff[i]
+
+            diff_string = diff_string.strip()
+            num_tokens = num_tokens_list[i]
+
+            is_substitution = False
+            if diff_type == -1:
+                is_substitution = (i &lt; last_index) and (diff[i + 1][0] == 1)
+                if is_substitution:
+                    edit_type = &#34;substitution&#34;
+                    subbed_string = diff[i + 1][1].strip()
+
+                    if len(diff_string) &gt; 1:
+                        html1.append(self.format_edit(diff_string, edit_type))
+                        html2.append(self.format_edit(subbed_string, edit_type))
+
+                    edit_offset1, offsets1 = deque(offsets1, diff_string, num_tokens)
+                    edit_offset2, offsets2 = deque(
+                        offsets2, diff_string, num_tokens_list[i + 1]
+                    )
+                    self.num_edits += 1
+                else:  # Deletion
+                    edit_type = &#34;deletion&#34;
+
+                    if len(diff_string) &gt; 1:
+                        html1.append(self.format_edit(diff_string, edit_type))
+
+                    edit_offset1, offsets1 = deque(offsets1, diff_string, num_tokens)
+                    edit_offset2 = (-1, -1)
+                    self.num_edits += 1
+            elif diff_type == 1:  # Insertion
+                edit_type = &#34;insertion&#34;
+
+                if len(diff_string) &gt; 1:
+                    html2.append(self.format_edit(diff_string, edit_type))
+
+                edit_offset2, offsets2 = deque(offsets2, diff_string, num_tokens)
+                edit_offset1 = (-1, -1)
+                self.num_edits += 1
+            elif diff_type == 0:
+                edit_type = &#34;same&#34;
+                html1.append(diff_string)
+                html2.append(diff_string)
+
+                edit_offset1, offsets1 = deque(offsets1, diff_string, num_tokens)
+                edit_offset2, offsets2 = deque(offsets2, diff_string, num_tokens)
+
+            begin1, end1 = edit_offset1
+            begin2, end2 = edit_offset2
+            text1 = self.content1[begin1:end1] if begin1 &gt;= 0 else &#34;&#34;
+            text2 = self.content2[begin2:end2] if begin2 &gt;= 0 else &#34;&#34;
+
+            edit_dicts.append(
+                {
+                    &#34;edit_type&#34;: edit_type,
+                    &#34;offset1&#34;: edit_offset1,
+                    &#34;offset2&#34;: edit_offset2,
+                    &#34;text1&#34;: text1,
+                    &#34;text2&#34;: text2,
+                }
+            )
+
+            if is_substitution:
+                i += 2
+            else:
+                i += 1
+
+        return &#34; &#34;.join(html1), &#34; &#34;.join(html2), edit_dicts
+
+    def locate_paragraph(self, paragraph_list, sentence_index, paragraphs):
+        &#34;&#34;&#34;
+        Given a sentence index, determine which paragraph it belongs to.
+        Args:
+            paragraph_list (int list)
+            sentence_index (int)
+            paragraphs (str list)
+        &#34;&#34;&#34;
+        begin = -1
+        end = -1
+
+        for i, par_index in enumerate(paragraph_list):
+            p = paragraphs[par_index]
+            if i == 0:
+                begin = 0
+                end = len(p) - 1  # Last index
+            else:
+                begin = end + 1
+                end = begin + len(p) - 1
+
+            if sentence_index &gt;= begin and sentence_index &lt;= end:
+                sent_index_in_par = sentence_index - begin
+                sent = paragraphs[par_index][sent_index_in_par]
+                return par_index, sent
+        raise IndexError(&#34;Sentence index {} out of range&#34;.format(sentence_index))
+
+    def checkConsecutive(self, l):
+        return sorted(l) == list(range(min(l), max(l) + 1))
+
+    def get_sentence(
+        self,
+        par_index,
+        paragraph_list,
+        sentence_list,
+        paragraphs,
+        paragraph_html,
+        global_offsets,
+        edits_json_key,
+        content,
+    ):
+        &#34;&#34;&#34;
+        Args:
+            par_index (int):    Original paragraph index.
+            paragraph_list (int list)
+            sentence_list (int list)
+            paragraphs (str list)
+            paragraph_html (str list)
+        &#34;&#34;&#34;
+        sentence_list = [j for j in sentence_list if j not in paragraph_html]
+
+        if not sentence_list:
+            return (None,) * 5
+
+        if not self.checkConsecutive(sentence_list):
+            # Then get the full range
+            sentence_list = list(range(min(sentence_list), max(sentence_list) + 1))
+
+        # Holds tuples of (text, paragraph_index, sentence_index)
+        sent_indices = self.get_sent_indices(par_index, paragraphs, sentence_list)
+
+        par_indices = set()
+        sentence_dicts = []
+        sentence_parts = []
+        for i, sent_index in enumerate(sentence_list):
+            try:
+                sent = paragraphs[par_index][sent_index]
+            except IndexError:
+                par_index, sent = self.locate_paragraph(
+                    paragraph_list, sent_index, paragraphs
+                )
+
+            sent_index = sent_indices[i]  # Global sentence index
+            offset = global_offsets[sent_index]
+            sent = content[offset[0] : offset[1]]
+            sentence_dict = {
+                &#34;text&#34;: sent,
+                &#34;paragraph_index&#34;: par_index,
+                &#34;sentence_index&#34;: sent_index,
+                &#34;offset&#34;: offset,
+            }
+
+            self.edits_json_dict[edits_json_key][sent_index] = sentence_dict
+            sentence_dicts.append(sentence_dict)
+            sentence_parts.append(sent)
+            par_indices.add(par_index)
+
+        sentence = &#34; &#34;.join(sentence_parts)
+        return (sentence, sentence_list, par_indices, sent_indices, sentence_dicts)
+
+    def add_unaligned_sentences(
+        self,
+        edit_type,
+        paragraph_html,
+        paragraphs,
+        par_index,
+        edits_json_key,
+        global_offsets,
+    ):
+        &#34;&#34;&#34;
+        Modify the `paragraph_html` dictionary in place.
+        &#34;&#34;&#34;
+        sentence_dicts = []
+        paragraph = paragraphs[par_index]
+        sent_indices = self.get_sent_indices(
+            par_index, paragraphs, range(len(paragraph))
+        )
+        for i, sentence in enumerate(paragraph):
+
+            if i not in paragraph_html:
+                paragraph_html[i] = self.format_edit(sentence, edit_type)
+                self.num_edits += 1
+
+                sent_index = sent_indices[i]
+                if edit_type == &#34;deletion&#34;:
+                    self.edits_json_dict[&#34;alignments&#34;][sent_index] = {
+                        &#34;match&#34;: [],
+                        &#34;edits&#34;: [],
+                    }
+
+                if edit_type == &#34;insertion&#34;:
+                    if -1 not in self.edits_json_dict[&#34;alignments&#34;]:
+                        self.edits_json_dict[&#34;alignments&#34;][-1] = {
+                            &#34;match&#34;: [],
+                            &#34;edits&#34;: [],
+                        }
+                    self.edits_json_dict[&#34;alignments&#34;][-1][&#34;match&#34;].append(sent_index)
+
+                self.edits_json_dict[edits_json_key][sent_index] = {
+                    &#34;text&#34;: sentence,
+                    &#34;paragraph_index&#34;: par_index,
+                    &#34;sentence_index&#34;: sent_index,
+                    &#34;offset&#34;: global_offsets[sent_index],
+                }
+        return sentence_dicts
+
+    def add_unaligned_paragraphs(self, edit_type, seen_pars, text_html, paragraphs):
+        &#34;&#34;&#34;
+        Modify the `text_html` dictionary in place.
+        &#34;&#34;&#34;
+        for paragraph_index, paragraph_sentence_list in enumerate(paragraphs):
+            par_text = &#34; &#34;.join(paragraph_sentence_list)
+            is_unaligned = (paragraph_index not in seen_pars) and (
+                not text_html[paragraph_index]
+            )
+            if is_unaligned:
+
+                # Indices of sentences within this paragraph
+                local_sentence_indices = list(range(len(paragraph_sentence_list)))
+                global_sent_indices = self.get_sent_indices(
+                    par_index=paragraph_index,
+                    paragraphs=paragraphs,
+                    sentence_list=local_sentence_indices,
+                )
+
+                assert edit_type in (&#34;deletion&#34;, &#34;insertion&#34;)
+
+                for local_sent_index in local_sentence_indices:
+                    global_sent_index = global_sent_indices[local_sent_index]
+
+                    if edit_type == &#34;deletion&#34;:
+                        offset_list = self.sentence_offsets1
+                        file_num = 1
+                        s1_index = global_sent_index
+                        s2_indices = [-1]
+                    else:
+                        offset_list = self.sentence_offsets2
+                        file_num = 2
+                        s1_index = -1
+                        s2_indices = [global_sent_index]
+
+                    sentence_text = paragraph_sentence_list[local_sent_index]
+                    self.edits_json_dict[f&#34;file{file_num}_sentences&#34;][
+                        global_sent_index
+                    ] = {
+                        &#34;text&#34;: sentence_text,
+                        &#34;paragraph_index&#34;: paragraph_index,
+                        &#34;sentence_index&#34;: global_sent_index,
+                        &#34;offset&#34;: offset_list[global_sent_index],
+                    }
+
+                    self.edits_json_dict[&#34;alignments&#34;][s1_index] = {
+                        &#34;match&#34;: s2_indices,
+                        &#34;edits&#34;: [
+                            {
+                                &#34;edit_type&#34;: edit_type,
+                                &#34;offset1&#34;: (
+                                    [-1, -1]
+                                    if edit_type == &#34;insertion&#34;
+                                    else offset_list[global_sent_index]
+                                ),
+                                &#34;offset2&#34;: (
+                                    [-1, -1]
+                                    if edit_type == &#34;deletion&#34;
+                                    else offset_list[global_sent_index]
+                                ),
+                                &#34;text1&#34;: (
+                                    &#34;&#34; if edit_type == &#34;insertion&#34; else sentence_text
+                                ),
+                                &#34;text2&#34;: (
+                                    &#34;&#34; if edit_type == &#34;deletion&#34; else sentence_text
+                                ),
+                            }
+                        ],
+                    }
+
+                paragraph_html = self.format_edit(par_text, edit_type)
+
+                text_html[paragraph_index] = paragraph_html
+                self.num_edits += 1
+
+    def add_aligned_paragraph(self, paragraph_dict, found_indices, full_html):
+        paragraph_html = &#34; &#34;.join(
+            [paragraph_dict[k] for k in sorted(paragraph_dict.keys())]
+        )
+        if found_indices is not None:
+            html_index = min(found_indices)
+            if html_index not in full_html:
+                full_html[html_index] = paragraph_html
+
+    def get_sent_indices(self, par_index, paragraphs, sentence_list):
+        &#34;&#34;&#34;
+        Convert local indices (within paragraph) to global indices.
+        Args:
+            par_index (int)
+            sentence_list (list of ints): The indices of the sentences
+                within the paragraph.
+        &#34;&#34;&#34;
+        sentence_offset = 0
+        i = 0
+
+        while i &lt; par_index:
+            if paragraphs[i][0]:
+                sentence_offset += len(paragraphs[i])
+            else:
+                sentence_offset += 1
+            i += 1
+        return [j + sentence_offset for j in sentence_list]
+
+    def get_token_offsets(self, token_offsets, sent_offset, par_index):
+        &#34;&#34;&#34;
+        Convert local offsets (within sentence) to global offsets.
+        &#34;&#34;&#34;
+        # If not first paragraph, add one to count newline
+        return [
+            (begin + sent_offset, end + sent_offset) for (begin, end) in token_offsets
+        ]
+
+    def get_diff_html(self, par_alignment, sent_alignments):
+        &#34;&#34;&#34;
+        Creates the HTML formatted diff for Draft 1 and Draft 2.
+        &#34;&#34;&#34;
+        seen_p1s = set()
+        seen_p2s = set()
+
+        for i, (p1_list, p2_list) in enumerate(par_alignment):
+            # For each aligned paragraph
+            for p1_index, p2_index in zip_longest(p1_list, p2_list):
+                if (p1_index is None) or (p2_index is None):
+                    continue
+
+                orig_p1_index = p1_index
+                orig_p2_index = p2_index
+
+                aligned_par_id = uuid.uuid4()
+
+                par1_html = dict()
+                par2_html = dict()
+
+                found_p1_indices = None
+                found_p2_indices = None
+
+                seen_p1s.update(p1_list)
+                seen_p2s.update(p2_list)
+
+                for aligned_sent_id, el in enumerate(sent_alignments[i]):
+                    if not el:
+                        continue
+                    aligned_sent_id = &#34;{}-{}&#34;.format(aligned_par_id, aligned_sent_id)
+                    s1_list, s2_list = el
+
+                    s1, s1_list, found_p1_indices, s1_indices, s1_dicts = (
+                        self.get_sentence(
+                            orig_p1_index,
+                            p1_list,
+                            s1_list,
+                            self.p1s,
+                            par1_html,
+                            self.sentence_offsets1,
+                            &#34;file1_sentences&#34;,
+                            self.content1,
+                        )
+                    )
+
+                    s2, s2_list, found_p2_indices, s2_indices, s2_dicts = (
+                        self.get_sentence(
+                            orig_p2_index,
+                            p2_list,
+                            s2_list,
+                            self.p2s,
+                            par2_html,
+                            self.sentence_offsets2,
+                            &#34;file2_sentences&#34;,
+                            self.content2,
+                        )
+                    )
+
+                    if (s1 is None) or (s2 is None):
+                        continue
+
+                    diff, char_diff, (offsets1, offsets2) = diff_wordMode(s1, s2)
+
+                    token_offsets1 = self.get_token_offsets(
+                        offsets1, s1_dicts[0][&#34;offset&#34;][0], orig_p1_index
+                    )
+                    token_offsets2 = self.get_token_offsets(
+                        offsets2, s2_dicts[0][&#34;offset&#34;][0], orig_p2_index
+                    )
+
+                    s1_html, s2_html, edit_dicts = self.handle_diff(
+                        diff,
+                        char_diff,
+                        token_offsets1,
+                        token_offsets2,
+                        s1_indices,
+                        s2_indices,
+                    )
+
+                    par1_html[s1_list[0]] = self.format_hover(s1_html, aligned_sent_id)
+                    par2_html[s2_list[0]] = self.format_hover(s2_html, aligned_sent_id)
+
+                    # Add sentence indices that we&#39;ve accounted for to paragraph dict
+                    for j in s1_list[1:]:
+                        par1_html[j] = &#34;&#34;  # Placeholder
+                    for j in s2_list[1:]:
+                        par2_html[j] = &#34;&#34;  # Placeholder
+
+                    # Now add the alignments
+                    for s1_index in s1_indices:
+                        self.edits_json_dict[&#34;alignments&#34;][int(s1_index)] = {
+                            &#34;match&#34;: s2_indices,
+                            &#34;edits&#34;: edit_dicts,
+                        }
+
+                if found_p1_indices is not None and orig_p1_index in found_p1_indices:
+                    self.add_unaligned_sentences(
+                        &#34;deletion&#34;,
+                        par1_html,
+                        self.p1s,
+                        orig_p1_index,
+                        &#34;file1_sentences&#34;,
+                        self.sentence_offsets1,
+                    )
+
+                if found_p2_indices is not None and orig_p2_index in found_p2_indices:
+                    self.add_unaligned_sentences(
+                        &#34;insertion&#34;,
+                        par2_html,
+                        self.p2s,
+                        orig_p2_index,
+                        &#34;file2_sentences&#34;,
+                        self.sentence_offsets2,
+                    )
+
+                self.add_aligned_paragraph(par1_html, found_p1_indices, self.html1)
+                self.add_aligned_paragraph(par2_html, found_p2_indices, self.html2)
+
+        self.add_unaligned_paragraphs(&#34;deletion&#34;, seen_p1s, self.html1, self.p1s)
+        self.add_unaligned_paragraphs(&#34;insertion&#34;, seen_p2s, self.html2, self.p2s)</code></pre>
+</details>
+<div class="desc"></div>
+<h3>Methods</h3>
+<dl>
+<dt id="revisions.edits_html.EditsHtml.add_aligned_paragraph"><code class="name flex">
+<span>def <span class="ident">add_aligned_paragraph</span></span>(<span>self, paragraph_dict, found_indices, full_html)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_aligned_paragraph(self, paragraph_dict, found_indices, full_html):
+    paragraph_html = &#34; &#34;.join(
+        [paragraph_dict[k] for k in sorted(paragraph_dict.keys())]
+    )
+    if found_indices is not None:
+        html_index = min(found_indices)
+        if html_index not in full_html:
+            full_html[html_index] = paragraph_html</code></pre>
+</details>
+<div class="desc"></div>
+</dd>
+<dt id="revisions.edits_html.EditsHtml.add_unaligned_paragraphs"><code class="name flex">
+<span>def <span class="ident">add_unaligned_paragraphs</span></span>(<span>self, edit_type, seen_pars, text_html, paragraphs)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_unaligned_paragraphs(self, edit_type, seen_pars, text_html, paragraphs):
+    &#34;&#34;&#34;
+    Modify the `text_html` dictionary in place.
+    &#34;&#34;&#34;
+    for paragraph_index, paragraph_sentence_list in enumerate(paragraphs):
+        par_text = &#34; &#34;.join(paragraph_sentence_list)
+        is_unaligned = (paragraph_index not in seen_pars) and (
+            not text_html[paragraph_index]
+        )
+        if is_unaligned:
+
+            # Indices of sentences within this paragraph
+            local_sentence_indices = list(range(len(paragraph_sentence_list)))
+            global_sent_indices = self.get_sent_indices(
+                par_index=paragraph_index,
+                paragraphs=paragraphs,
+                sentence_list=local_sentence_indices,
+            )
+
+            assert edit_type in (&#34;deletion&#34;, &#34;insertion&#34;)
+
+            for local_sent_index in local_sentence_indices:
+                global_sent_index = global_sent_indices[local_sent_index]
+
+                if edit_type == &#34;deletion&#34;:
+                    offset_list = self.sentence_offsets1
+                    file_num = 1
+                    s1_index = global_sent_index
+                    s2_indices = [-1]
+                else:
+                    offset_list = self.sentence_offsets2
+                    file_num = 2
+                    s1_index = -1
+                    s2_indices = [global_sent_index]
+
+                sentence_text = paragraph_sentence_list[local_sent_index]
+                self.edits_json_dict[f&#34;file{file_num}_sentences&#34;][
+                    global_sent_index
+                ] = {
+                    &#34;text&#34;: sentence_text,
+                    &#34;paragraph_index&#34;: paragraph_index,
+                    &#34;sentence_index&#34;: global_sent_index,
+                    &#34;offset&#34;: offset_list[global_sent_index],
+                }
+
+                self.edits_json_dict[&#34;alignments&#34;][s1_index] = {
+                    &#34;match&#34;: s2_indices,
+                    &#34;edits&#34;: [
+                        {
+                            &#34;edit_type&#34;: edit_type,
+                            &#34;offset1&#34;: (
+                                [-1, -1]
+                                if edit_type == &#34;insertion&#34;
+                                else offset_list[global_sent_index]
+                            ),
+                            &#34;offset2&#34;: (
+                                [-1, -1]
+                                if edit_type == &#34;deletion&#34;
+                                else offset_list[global_sent_index]
+                            ),
+                            &#34;text1&#34;: (
+                                &#34;&#34; if edit_type == &#34;insertion&#34; else sentence_text
+                            ),
+                            &#34;text2&#34;: (
+                                &#34;&#34; if edit_type == &#34;deletion&#34; else sentence_text
+                            ),
+                        }
+                    ],
+                }
+
+            paragraph_html = self.format_edit(par_text, edit_type)
+
+            text_html[paragraph_index] = paragraph_html
+            self.num_edits += 1</code></pre>
+</details>
+<div class="desc"><p>Modify the <code>text_html</code> dictionary in place.</p></div>
+</dd>
+<dt id="revisions.edits_html.EditsHtml.add_unaligned_sentences"><code class="name flex">
+<span>def <span class="ident">add_unaligned_sentences</span></span>(<span>self, edit_type, paragraph_html, paragraphs, par_index, edits_json_key, global_offsets)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_unaligned_sentences(
+    self,
+    edit_type,
+    paragraph_html,
+    paragraphs,
+    par_index,
+    edits_json_key,
+    global_offsets,
+):
+    &#34;&#34;&#34;
+    Modify the `paragraph_html` dictionary in place.
+    &#34;&#34;&#34;
+    sentence_dicts = []
+    paragraph = paragraphs[par_index]
+    sent_indices = self.get_sent_indices(
+        par_index, paragraphs, range(len(paragraph))
+    )
+    for i, sentence in enumerate(paragraph):
+
+        if i not in paragraph_html:
+            paragraph_html[i] = self.format_edit(sentence, edit_type)
+            self.num_edits += 1
+
+            sent_index = sent_indices[i]
+            if edit_type == &#34;deletion&#34;:
+                self.edits_json_dict[&#34;alignments&#34;][sent_index] = {
+                    &#34;match&#34;: [],
+                    &#34;edits&#34;: [],
+                }
+
+            if edit_type == &#34;insertion&#34;:
+                if -1 not in self.edits_json_dict[&#34;alignments&#34;]:
+                    self.edits_json_dict[&#34;alignments&#34;][-1] = {
+                        &#34;match&#34;: [],
+                        &#34;edits&#34;: [],
+                    }
+                self.edits_json_dict[&#34;alignments&#34;][-1][&#34;match&#34;].append(sent_index)
+
+            self.edits_json_dict[edits_json_key][sent_index] = {
+                &#34;text&#34;: sentence,
+                &#34;paragraph_index&#34;: par_index,
+                &#34;sentence_index&#34;: sent_index,
+                &#34;offset&#34;: global_offsets[sent_index],
+            }
+    return sentence_dicts</code></pre>
+</details>
+<div class="desc"><p>Modify the <code>paragraph_html</code> dictionary in place.</p></div>
+</dd>
+<dt id="revisions.edits_html.EditsHtml.checkConsecutive"><code class="name flex">
+<span>def <span class="ident">checkConsecutive</span></span>(<span>self, l)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def checkConsecutive(self, l):
+    return sorted(l) == list(range(min(l), max(l) + 1))</code></pre>
+</details>
+<div class="desc"></div>
+</dd>
+<dt id="revisions.edits_html.EditsHtml.format_edit"><code class="name flex">
+<span>def <span class="ident">format_edit</span></span>(<span>self, text, edit_type)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def format_edit(self, text, edit_type):
+    return self.render_template(&#34;{}.html&#34;.format(edit_type), text=text)</code></pre>
+</details>
+<div class="desc"></div>
+</dd>
+<dt id="revisions.edits_html.EditsHtml.format_hover"><code class="name flex">
+<span>def <span class="ident">format_hover</span></span>(<span>self, text, index)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def format_hover(self, text, index):
+    return self.render_template(&#34;hover.html&#34;, index=index, text=text)</code></pre>
+</details>
+<div class="desc"></div>
+</dd>
+<dt id="revisions.edits_html.EditsHtml.get_diff_html"><code class="name flex">
+<span>def <span class="ident">get_diff_html</span></span>(<span>self, par_alignment, sent_alignments)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_diff_html(self, par_alignment, sent_alignments):
+    &#34;&#34;&#34;
+    Creates the HTML formatted diff for Draft 1 and Draft 2.
+    &#34;&#34;&#34;
+    seen_p1s = set()
+    seen_p2s = set()
+
+    for i, (p1_list, p2_list) in enumerate(par_alignment):
+        # For each aligned paragraph
+        for p1_index, p2_index in zip_longest(p1_list, p2_list):
+            if (p1_index is None) or (p2_index is None):
+                continue
+
+            orig_p1_index = p1_index
+            orig_p2_index = p2_index
+
+            aligned_par_id = uuid.uuid4()
+
+            par1_html = dict()
+            par2_html = dict()
+
+            found_p1_indices = None
+            found_p2_indices = None
+
+            seen_p1s.update(p1_list)
+            seen_p2s.update(p2_list)
+
+            for aligned_sent_id, el in enumerate(sent_alignments[i]):
+                if not el:
+                    continue
+                aligned_sent_id = &#34;{}-{}&#34;.format(aligned_par_id, aligned_sent_id)
+                s1_list, s2_list = el
+
+                s1, s1_list, found_p1_indices, s1_indices, s1_dicts = (
+                    self.get_sentence(
+                        orig_p1_index,
+                        p1_list,
+                        s1_list,
+                        self.p1s,
+                        par1_html,
+                        self.sentence_offsets1,
+                        &#34;file1_sentences&#34;,
+                        self.content1,
+                    )
+                )
+
+                s2, s2_list, found_p2_indices, s2_indices, s2_dicts = (
+                    self.get_sentence(
+                        orig_p2_index,
+                        p2_list,
+                        s2_list,
+                        self.p2s,
+                        par2_html,
+                        self.sentence_offsets2,
+                        &#34;file2_sentences&#34;,
+                        self.content2,
+                    )
+                )
+
+                if (s1 is None) or (s2 is None):
+                    continue
+
+                diff, char_diff, (offsets1, offsets2) = diff_wordMode(s1, s2)
+
+                token_offsets1 = self.get_token_offsets(
+                    offsets1, s1_dicts[0][&#34;offset&#34;][0], orig_p1_index
+                )
+                token_offsets2 = self.get_token_offsets(
+                    offsets2, s2_dicts[0][&#34;offset&#34;][0], orig_p2_index
+                )
+
+                s1_html, s2_html, edit_dicts = self.handle_diff(
+                    diff,
+                    char_diff,
+                    token_offsets1,
+                    token_offsets2,
+                    s1_indices,
+                    s2_indices,
+                )
+
+                par1_html[s1_list[0]] = self.format_hover(s1_html, aligned_sent_id)
+                par2_html[s2_list[0]] = self.format_hover(s2_html, aligned_sent_id)
+
+                # Add sentence indices that we&#39;ve accounted for to paragraph dict
+                for j in s1_list[1:]:
+                    par1_html[j] = &#34;&#34;  # Placeholder
+                for j in s2_list[1:]:
+                    par2_html[j] = &#34;&#34;  # Placeholder
+
+                # Now add the alignments
+                for s1_index in s1_indices:
+                    self.edits_json_dict[&#34;alignments&#34;][int(s1_index)] = {
+                        &#34;match&#34;: s2_indices,
+                        &#34;edits&#34;: edit_dicts,
+                    }
+
+            if found_p1_indices is not None and orig_p1_index in found_p1_indices:
+                self.add_unaligned_sentences(
+                    &#34;deletion&#34;,
+                    par1_html,
+                    self.p1s,
+                    orig_p1_index,
+                    &#34;file1_sentences&#34;,
+                    self.sentence_offsets1,
+                )
+
+            if found_p2_indices is not None and orig_p2_index in found_p2_indices:
+                self.add_unaligned_sentences(
+                    &#34;insertion&#34;,
+                    par2_html,
+                    self.p2s,
+                    orig_p2_index,
+                    &#34;file2_sentences&#34;,
+                    self.sentence_offsets2,
+                )
+
+            self.add_aligned_paragraph(par1_html, found_p1_indices, self.html1)
+            self.add_aligned_paragraph(par2_html, found_p2_indices, self.html2)
+
+    self.add_unaligned_paragraphs(&#34;deletion&#34;, seen_p1s, self.html1, self.p1s)
+    self.add_unaligned_paragraphs(&#34;insertion&#34;, seen_p2s, self.html2, self.p2s)</code></pre>
+</details>
+<div class="desc"><p>Creates the HTML formatted diff for Draft 1 and Draft 2.</p></div>
+</dd>
+<dt id="revisions.edits_html.EditsHtml.get_html_text"><code class="name flex">
+<span>def <span class="ident">get_html_text</span></span>(<span>self, header1='', header2='')</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_html_text(self, header1=&#34;&#34;, header2=&#34;&#34;):
+    html1_list = [s for s in self.html1 if s.strip()]
+    html2_list = [s for s in self.html2 if s.strip()]
+
+    if not html1_list:
+        html1_list = [&#34;Empty&#34;]
+    if not html2_list:
+        html2_list = [&#34;Empty&#34;]
+
+    return self.render_template(
+        &#34;base.html&#34;,
+        html1_list=html1_list,
+        html2_list=html2_list,
+        header1=header1,
+        header2=header2,
+    )</code></pre>
+</details>
+<div class="desc"></div>
+</dd>
+<dt id="revisions.edits_html.EditsHtml.get_sent_indices"><code class="name flex">
+<span>def <span class="ident">get_sent_indices</span></span>(<span>self, par_index, paragraphs, sentence_list)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_sent_indices(self, par_index, paragraphs, sentence_list):
+    &#34;&#34;&#34;
+    Convert local indices (within paragraph) to global indices.
+    Args:
+        par_index (int)
+        sentence_list (list of ints): The indices of the sentences
+            within the paragraph.
+    &#34;&#34;&#34;
+    sentence_offset = 0
+    i = 0
+
+    while i &lt; par_index:
+        if paragraphs[i][0]:
+            sentence_offset += len(paragraphs[i])
+        else:
+            sentence_offset += 1
+        i += 1
+    return [j + sentence_offset for j in sentence_list]</code></pre>
+</details>
+<div class="desc"><p>Convert local indices (within paragraph) to global indices.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt>par_index (int)</dt>
+<dt><strong><code>sentence_list</code></strong> :&ensp;<code>list</code> of <code>ints</code></dt>
+<dd>The indices of the sentences
+within the paragraph.</dd>
+</dl></div>
+</dd>
+<dt id="revisions.edits_html.EditsHtml.get_sentence"><code class="name flex">
+<span>def <span class="ident">get_sentence</span></span>(<span>self,<br>par_index,<br>paragraph_list,<br>sentence_list,<br>paragraphs,<br>paragraph_html,<br>global_offsets,<br>edits_json_key,<br>content)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_sentence(
+    self,
+    par_index,
+    paragraph_list,
+    sentence_list,
+    paragraphs,
+    paragraph_html,
+    global_offsets,
+    edits_json_key,
+    content,
+):
+    &#34;&#34;&#34;
+    Args:
+        par_index (int):    Original paragraph index.
+        paragraph_list (int list)
+        sentence_list (int list)
+        paragraphs (str list)
+        paragraph_html (str list)
+    &#34;&#34;&#34;
+    sentence_list = [j for j in sentence_list if j not in paragraph_html]
+
+    if not sentence_list:
+        return (None,) * 5
+
+    if not self.checkConsecutive(sentence_list):
+        # Then get the full range
+        sentence_list = list(range(min(sentence_list), max(sentence_list) + 1))
+
+    # Holds tuples of (text, paragraph_index, sentence_index)
+    sent_indices = self.get_sent_indices(par_index, paragraphs, sentence_list)
+
+    par_indices = set()
+    sentence_dicts = []
+    sentence_parts = []
+    for i, sent_index in enumerate(sentence_list):
+        try:
+            sent = paragraphs[par_index][sent_index]
+        except IndexError:
+            par_index, sent = self.locate_paragraph(
+                paragraph_list, sent_index, paragraphs
+            )
+
+        sent_index = sent_indices[i]  # Global sentence index
+        offset = global_offsets[sent_index]
+        sent = content[offset[0] : offset[1]]
+        sentence_dict = {
+            &#34;text&#34;: sent,
+            &#34;paragraph_index&#34;: par_index,
+            &#34;sentence_index&#34;: sent_index,
+            &#34;offset&#34;: offset,
+        }
+
+        self.edits_json_dict[edits_json_key][sent_index] = sentence_dict
+        sentence_dicts.append(sentence_dict)
+        sentence_parts.append(sent)
+        par_indices.add(par_index)
+
+    sentence = &#34; &#34;.join(sentence_parts)
+    return (sentence, sentence_list, par_indices, sent_indices, sentence_dicts)</code></pre>
+</details>
+<div class="desc"><h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>par_index</code></strong> :&ensp;<code>int</code></dt>
+<dd>Original paragraph index.</dd>
+</dl>
+<p>paragraph_list (int list)
+sentence_list (int list)
+paragraphs (str list)
+paragraph_html (str list)</p></div>
+</dd>
+<dt id="revisions.edits_html.EditsHtml.get_token_offsets"><code class="name flex">
+<span>def <span class="ident">get_token_offsets</span></span>(<span>self, token_offsets, sent_offset, par_index)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_token_offsets(self, token_offsets, sent_offset, par_index):
+    &#34;&#34;&#34;
+    Convert local offsets (within sentence) to global offsets.
+    &#34;&#34;&#34;
+    # If not first paragraph, add one to count newline
+    return [
+        (begin + sent_offset, end + sent_offset) for (begin, end) in token_offsets
+    ]</code></pre>
+</details>
+<div class="desc"><p>Convert local offsets (within sentence) to global offsets.</p></div>
+</dd>
+<dt id="revisions.edits_html.EditsHtml.handle_diff"><code class="name flex">
+<span>def <span class="ident">handle_diff</span></span>(<span>self, diff, char_diff, offsets1, offsets2, s1_indices, s2_indices)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def handle_diff(self, diff, char_diff, offsets1, offsets2, s1_indices, s2_indices):
+    &#34;&#34;&#34;
+    Args:
+        diff (list): Diff-match-patch output
+    &#34;&#34;&#34;
+    html1 = []
+    html2 = []
+    edit_dicts = []
+
+    num_tokens_list = [len(list(s)) for s in list(zip(*char_diff))[1]]
+    i = 0
+    last_index = len(diff) - 1
+
+    def deque(offset_list, diff_string, num_tokens):
+        diff_offsets = offset_list[:num_tokens]
+        if not diff_offsets:
+            edit_offset = (-1, -1)
+        else:
+            begin = diff_offsets[0][0]
+            end = diff_offsets[-1][-1]
+
+            # Important: double quotes can change the number of
+            # characters in a sentence.
+            num_double_quotes = diff_string.count(&#34;&#39;&#39;&#34;)
+            num_double_quotes += diff_string.count(&#34;``&#34;)
+            # Subtract 1 from the end for every double quote found
+            end -= num_double_quotes
+            edit_offset = (begin, end)
+
+        return edit_offset, offset_list[num_tokens:]
+
+    while i &lt;= last_index:
+        diff_type, diff_string = diff[i]
+
+        diff_string = diff_string.strip()
+        num_tokens = num_tokens_list[i]
+
+        is_substitution = False
+        if diff_type == -1:
+            is_substitution = (i &lt; last_index) and (diff[i + 1][0] == 1)
+            if is_substitution:
+                edit_type = &#34;substitution&#34;
+                subbed_string = diff[i + 1][1].strip()
+
+                if len(diff_string) &gt; 1:
+                    html1.append(self.format_edit(diff_string, edit_type))
+                    html2.append(self.format_edit(subbed_string, edit_type))
+
+                edit_offset1, offsets1 = deque(offsets1, diff_string, num_tokens)
+                edit_offset2, offsets2 = deque(
+                    offsets2, diff_string, num_tokens_list[i + 1]
+                )
+                self.num_edits += 1
+            else:  # Deletion
+                edit_type = &#34;deletion&#34;
+
+                if len(diff_string) &gt; 1:
+                    html1.append(self.format_edit(diff_string, edit_type))
+
+                edit_offset1, offsets1 = deque(offsets1, diff_string, num_tokens)
+                edit_offset2 = (-1, -1)
+                self.num_edits += 1
+        elif diff_type == 1:  # Insertion
+            edit_type = &#34;insertion&#34;
+
+            if len(diff_string) &gt; 1:
+                html2.append(self.format_edit(diff_string, edit_type))
+
+            edit_offset2, offsets2 = deque(offsets2, diff_string, num_tokens)
+            edit_offset1 = (-1, -1)
+            self.num_edits += 1
+        elif diff_type == 0:
+            edit_type = &#34;same&#34;
+            html1.append(diff_string)
+            html2.append(diff_string)
+
+            edit_offset1, offsets1 = deque(offsets1, diff_string, num_tokens)
+            edit_offset2, offsets2 = deque(offsets2, diff_string, num_tokens)
+
+        begin1, end1 = edit_offset1
+        begin2, end2 = edit_offset2
+        text1 = self.content1[begin1:end1] if begin1 &gt;= 0 else &#34;&#34;
+        text2 = self.content2[begin2:end2] if begin2 &gt;= 0 else &#34;&#34;
+
+        edit_dicts.append(
+            {
+                &#34;edit_type&#34;: edit_type,
+                &#34;offset1&#34;: edit_offset1,
+                &#34;offset2&#34;: edit_offset2,
+                &#34;text1&#34;: text1,
+                &#34;text2&#34;: text2,
+            }
+        )
+
+        if is_substitution:
+            i += 2
+        else:
+            i += 1
+
+    return &#34; &#34;.join(html1), &#34; &#34;.join(html2), edit_dicts</code></pre>
+</details>
+<div class="desc"><h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>diff</code></strong> :&ensp;<code>list</code></dt>
+<dd>Diff-match-patch output</dd>
+</dl></div>
+</dd>
+<dt id="revisions.edits_html.EditsHtml.locate_paragraph"><code class="name flex">
+<span>def <span class="ident">locate_paragraph</span></span>(<span>self, paragraph_list, sentence_index, paragraphs)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def locate_paragraph(self, paragraph_list, sentence_index, paragraphs):
+    &#34;&#34;&#34;
+    Given a sentence index, determine which paragraph it belongs to.
+    Args:
+        paragraph_list (int list)
+        sentence_index (int)
+        paragraphs (str list)
+    &#34;&#34;&#34;
+    begin = -1
+    end = -1
+
+    for i, par_index in enumerate(paragraph_list):
+        p = paragraphs[par_index]
+        if i == 0:
+            begin = 0
+            end = len(p) - 1  # Last index
+        else:
+            begin = end + 1
+            end = begin + len(p) - 1
+
+        if sentence_index &gt;= begin and sentence_index &lt;= end:
+            sent_index_in_par = sentence_index - begin
+            sent = paragraphs[par_index][sent_index_in_par]
+            return par_index, sent
+    raise IndexError(&#34;Sentence index {} out of range&#34;.format(sentence_index))</code></pre>
+</details>
+<div class="desc"><p>Given a sentence index, determine which paragraph it belongs to.</p>
+<h2 id="args">Args</h2>
+<p>paragraph_list (int list)
+sentence_index (int)
+paragraphs (str list)</p></div>
+</dd>
+<dt id="revisions.edits_html.EditsHtml.render_template"><code class="name flex">
+<span>def <span class="ident">render_template</span></span>(<span>self, template_name, **kwargs)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def render_template(self, template_name, **kwargs):
+    with open(os.path.join(self.templates_dir, template_name)) as f:
+        template = Template(f.read())
+    html_text = template.render(kwargs)
+    return html_text</code></pre>
+</details>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="revisions" href="index.html">revisions</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="revisions.edits_html.EditsHtml" href="#revisions.edits_html.EditsHtml">EditsHtml</a></code></h4>
+<ul class="">
+<li><code><a title="revisions.edits_html.EditsHtml.add_aligned_paragraph" href="#revisions.edits_html.EditsHtml.add_aligned_paragraph">add_aligned_paragraph</a></code></li>
+<li><code><a title="revisions.edits_html.EditsHtml.add_unaligned_paragraphs" href="#revisions.edits_html.EditsHtml.add_unaligned_paragraphs">add_unaligned_paragraphs</a></code></li>
+<li><code><a title="revisions.edits_html.EditsHtml.add_unaligned_sentences" href="#revisions.edits_html.EditsHtml.add_unaligned_sentences">add_unaligned_sentences</a></code></li>
+<li><code><a title="revisions.edits_html.EditsHtml.checkConsecutive" href="#revisions.edits_html.EditsHtml.checkConsecutive">checkConsecutive</a></code></li>
+<li><code><a title="revisions.edits_html.EditsHtml.format_edit" href="#revisions.edits_html.EditsHtml.format_edit">format_edit</a></code></li>
+<li><code><a title="revisions.edits_html.EditsHtml.format_hover" href="#revisions.edits_html.EditsHtml.format_hover">format_hover</a></code></li>
+<li><code><a title="revisions.edits_html.EditsHtml.get_diff_html" href="#revisions.edits_html.EditsHtml.get_diff_html">get_diff_html</a></code></li>
+<li><code><a title="revisions.edits_html.EditsHtml.get_html_text" href="#revisions.edits_html.EditsHtml.get_html_text">get_html_text</a></code></li>
+<li><code><a title="revisions.edits_html.EditsHtml.get_sent_indices" href="#revisions.edits_html.EditsHtml.get_sent_indices">get_sent_indices</a></code></li>
+<li><code><a title="revisions.edits_html.EditsHtml.get_sentence" href="#revisions.edits_html.EditsHtml.get_sentence">get_sentence</a></code></li>
+<li><code><a title="revisions.edits_html.EditsHtml.get_token_offsets" href="#revisions.edits_html.EditsHtml.get_token_offsets">get_token_offsets</a></code></li>
+<li><code><a title="revisions.edits_html.EditsHtml.handle_diff" href="#revisions.edits_html.EditsHtml.handle_diff">handle_diff</a></code></li>
+<li><code><a title="revisions.edits_html.EditsHtml.locate_paragraph" href="#revisions.edits_html.EditsHtml.locate_paragraph">locate_paragraph</a></code></li>
+<li><code><a title="revisions.edits_html.EditsHtml.render_template" href="#revisions.edits_html.EditsHtml.render_template">render_template</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

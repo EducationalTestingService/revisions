@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: revisions
+Version: 1.0
+Summary: Temporary package
+Author: Sophia Chan
+Author-email: schan@ets.org
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary

@@ -1,0 +1,5 @@
+{
+    "root":                     "UPDATE THIS",
+    "stop_words":               "data/stop_words.txt",
+    "templates":                "templates"
+}
